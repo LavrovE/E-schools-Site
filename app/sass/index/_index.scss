@@ -17,5 +17,7 @@
 //}
 .wrapper{
   @include wrapper();
-  @include row-flex;
+  flex-wrap: wrap;
+  //@include md
+  //@include row-flex;
 }
