@@ -21,3 +21,126 @@
   //@include md
   //@include row-flex;
 }
+
+.menu{
+  @include row-flex();
+
+  justify-content: space-between;
+  align-items: center;
+  &__link{
+    font-size: $menu-size;
+    color: $text-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $light-font;
+    letter-spacing: 1px;
+
+  }
+  &__item{
+    display: inline-block;
+    vertical-align: middle;
+    @include col();
+    padding: 0 14px;
+    @include lg(padding,0px);
+
+  }
+}
+.logo{
+  //flex-grow: 1.2;
+  //@include lg(flex-grow,0);
+  flex-basis: 216px;
+  @include col();
+  @include lg(flex-basis,auto);
+
+  a {
+
+  }
+  //@include size(2);
+
+}
+header .header nav{
+  @include lg(margin-left,auto);
+  @include col();
+  //@include size(6);
+  //flex-grow: 1;
+  //@include lg(flex-grow,0);
+}
+
+.connect{
+  //@include size-lg(12);
+}
+.header{
+  min-height: 78px;
+  @include row-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > *{
+    @include col();
+  }
+}
+
+.language {
+  margin-left: auto;
+  font-family: $light-font;
+  &__selected {
+    background: url(../img/sprite.png) 0 0 no-repeat;
+    border: none;
+    display: block;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 15px;
+    background-position: 40px -487px;
+  }
+  &__wrapper {
+    position: relative;
+    width: 100%;
+  }
+  &__items {
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    left: 0px;
+    top: 24px;
+    right: 0px;
+    z-index: 99;
+    padding: 0px;
+
+  }
+  &__item {
+    text-align: center;
+    width: 100%;
+    &:first-child {
+
+    }
+    &:last-child {
+
+    }
+    &:hover {
+
+    }
+    a {
+      width: 100%;
+      display: block;
+      padding: 10px 0px;
+      text-decoration: none;
+    }
+  }
+}
+.btn{
+  font-size: 16px;
+  -webkit-border-radius: 26px;
+  text-transform: uppercase;
+  font-family: $regular-font;
+  -moz-border-radius: 26px;
+  border-radius: 26px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 18px 32px;
+  text-decoration: none;
+  &-green{
+    background:$btn-color;
+    color:$secondary-color;
+  }
+}
+
